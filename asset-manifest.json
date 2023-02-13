@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/brompton-website/static/css/main.921a7a24.css",
+    "main.js": "/brompton-website/static/js/main.c2ab3c41.js",
+    "static/js/241.b51ea856.chunk.js": "/brompton-website/static/js/241.b51ea856.chunk.js",
+    "static/css/580.dea1a6dd.chunk.css": "/brompton-website/static/css/580.dea1a6dd.chunk.css",
+    "static/js/580.22a295ee.chunk.js": "/brompton-website/static/js/580.22a295ee.chunk.js",
+    "static/js/611.547a1a6c.chunk.js": "/brompton-website/static/js/611.547a1a6c.chunk.js",
+    "static/js/787.db46d638.chunk.js": "/brompton-website/static/js/787.db46d638.chunk.js",
+    "static/js/550.1b6086f5.chunk.js": "/brompton-website/static/js/550.1b6086f5.chunk.js",
+    "static/js/26.f5d97bbe.chunk.js": "/brompton-website/static/js/26.f5d97bbe.chunk.js",
+    "static/js/93.696723b4.chunk.js": "/brompton-website/static/js/93.696723b4.chunk.js",
+    "static/media/We are Brompton.jpg": "/brompton-website/static/media/We are Brompton.4637293d45195b6c30ea.jpg",
+    "static/media/TIG welding 1551x702.jpg": "/brompton-website/static/media/TIG welding 1551x702.a51700098b7fe1f1baf8.jpg",
+    "static/media/Clound-Blue-C-Line-Folded-Banner.png": "/brompton-website/static/media/Clound-Blue-C-Line-Folded-Banner.b01267c632ae77d86238.png",
+    "static/media/Built to last.jpg": "/brompton-website/static/media/Built to last.581978b0431c9d69aac3.jpg",
+    "index.html": "/brompton-website/index.html",
+    "main.921a7a24.css.map": "/brompton-website/static/css/main.921a7a24.css.map",
+    "main.c2ab3c41.js.map": "/brompton-website/static/js/main.c2ab3c41.js.map",
+    "241.b51ea856.chunk.js.map": "/brompton-website/static/js/241.b51ea856.chunk.js.map",
+    "580.dea1a6dd.chunk.css.map": "/brompton-website/static/css/580.dea1a6dd.chunk.css.map",
+    "580.22a295ee.chunk.js.map": "/brompton-website/static/js/580.22a295ee.chunk.js.map",
+    "611.547a1a6c.chunk.js.map": "/brompton-website/static/js/611.547a1a6c.chunk.js.map",
+    "787.db46d638.chunk.js.map": "/brompton-website/static/js/787.db46d638.chunk.js.map",
+    "550.1b6086f5.chunk.js.map": "/brompton-website/static/js/550.1b6086f5.chunk.js.map",
+    "26.f5d97bbe.chunk.js.map": "/brompton-website/static/js/26.f5d97bbe.chunk.js.map",
+    "93.696723b4.chunk.js.map": "/brompton-website/static/js/93.696723b4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.921a7a24.css",
+    "static/js/main.c2ab3c41.js"
+  ]
+}
