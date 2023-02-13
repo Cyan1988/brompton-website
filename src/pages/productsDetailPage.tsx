@@ -1,10 +1,17 @@
 import React from "react";
+import { useParams } from "react-router";
 
 function ProductsDetailPage() {
+  const params = useParams();
+  console.log(params);
+
   return (
-    <div>
-      <div>我是圖片，我們兩個對半分</div>
-      <div>我是商品詳情：1.logo 2.文字信息 3.數量 4.價格 5.button</div>
+    <div className="grid grid-cols-2 h-[30rem]">
+      <div>我是圖片</div>
+      <div className="grid grid-rows-2">
+        <div>Logo+文字信息</div>
+        <div>数量+价格+add</div>
+      </div>
     </div>
   );
 }

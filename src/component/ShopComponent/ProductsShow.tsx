@@ -3,8 +3,9 @@ import { Card } from "antd";
 import { List, ConfigProvider } from "antd";
 import productsList from "../../data/products_list.json";
 import { SeriesContext } from "../../pages/productsPage";
+import { NavLink } from "react-router-dom";
 
-const ProductsShow: React.FC = () => {
+const ProductsShow: React.FC = (props: any) => {
   // 拿不到后台数据接口，用手写JSON代替一下
   const itemList: {
     title: string;
@@ -13,6 +14,7 @@ const ProductsShow: React.FC = () => {
     weight: string;
     text: string;
     series: string;
+    id: string;
   }[] = productsList;
 
   // 卡片组件
@@ -78,6 +80,9 @@ const ProductsShow: React.FC = () => {
                   src={item.img_url}
                 />
               }
+              onClick={() => {
+                window.location.href = `/shop/detail/${item.id}`;
+              }}
             >
               <Meta title={item.title} />
               <div className="my-6">

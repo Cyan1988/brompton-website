@@ -23,6 +23,10 @@ export default function BpRouter() {
       path: "/checkout",
       element: LazyLoad("checkoutPage"),
     },
+    {
+      path: "/shop/detail/:id",
+      element: LazyLoad("productsDetailPage"),
+    },
   ]);
   return element;
 }
@@ -30,9 +34,18 @@ export default function BpRouter() {
 // 路由懒加载的封装
 const LazyLoad = (path: string) => {
   const LazyLoadComponent = React.lazy(() => import(`../pages/${path}`));
+
   return (
-    <React.Suspense fallback={<>Loading Now</>}>
-      <LazyLoadComponent></LazyLoadComponent>
-    </React.Suspense>
+    <div>
+      <React.Suspense
+        fallback={
+          <div className="text-center h-[40rem] leading-[40rem]">
+            Loading Now...
+          </div>
+        }
+      >
+        <LazyLoadComponent />
+      </React.Suspense>
+    </div>
   );
 };
