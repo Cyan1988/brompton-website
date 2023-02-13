@@ -157,7 +157,7 @@ const RecommendCarousel: React.FC = () => (
         arrows={true}
         dots={false}
         slidesToShow={2}
-        slidesToScroll={4}
+        slidesToScroll={6}
         className="content-around px-12 bg-zinc-600"
       >
         {itemList.map((item) => (
@@ -221,7 +221,7 @@ const RecommendCarousel: React.FC = () => (
         autoplay
         arrows={true}
         slidesToShow={1}
-        slidesToScroll={4}
+        slidesToScroll={1}
         className="content-around px-12 bg-zinc-600"
       >
         {itemList.map((item) => (
