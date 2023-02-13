@@ -9,3 +9,4 @@
 - [ ] 商品詳情數據交互
 - [ ] 嬾加載 Loading 頁面樣式
 - [ ] Contact About Map Login 等其他靜態頁面
+- [ ] 語法優化、組件修改
