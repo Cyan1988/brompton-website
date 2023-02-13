@@ -10,3 +10,23 @@
 - [ ] 嬾加載 Loading 頁面樣式
 - [ ] Contact About Map Login 等其他靜態頁面
 - [ ] 語法優化、組件修改
+
+技术栈：
+
+Language: Typescript
+
+CSS:
+
+1. Tailwind CSS
+2. Ant Design
+3. Ant Icon
+4. Hero Icon
+
+Framework:
+
+1. React
+2. React-Router
+3. React-Redux Toolkit (不一定用)
+
+Others:
+Axios (不一定用)
