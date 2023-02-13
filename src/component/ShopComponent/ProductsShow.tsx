@@ -3,7 +3,6 @@ import { Card } from "antd";
 import { List, ConfigProvider } from "antd";
 import productsList from "../../data/products_list.json";
 import { SeriesContext } from "../../pages/productsPage";
-import { NavLink } from "react-router-dom";
 
 const ProductsShow: React.FC = (props: any) => {
   // 拿不到后台数据接口，用手写JSON代替一下
