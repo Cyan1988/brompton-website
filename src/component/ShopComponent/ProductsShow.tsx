@@ -50,7 +50,7 @@ const ProductsShow: React.FC = () => {
       </div>
       {/* Grid List 组件 */}
       <List
-        className="bg-slate-300 pt-6 md: col-start-2 md:col-end-7"
+        className="bg-neutral-200 pt-6 md: col-start-2 md:col-end-7"
         grid={{
           gutter: 0,
           xs: 1,

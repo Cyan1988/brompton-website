@@ -36,7 +36,7 @@ const FilterNav = (props: any) => {
   }, [seriesName, getSeriesName]);
 
   return (
-    <div className="bg-slate-300 text-[1.25rem] p-3 lg:pt-6 lg:col-start-1 lg:col-end-1">
+    <div className="bg-neutral-200 text-[1.25rem] p-3  lg:pt-6 lg:col-start-1 lg:col-end-1">
       {/* Filter 按键 电脑端不显示 */}
       <div className="text-right">
         <div
@@ -70,7 +70,7 @@ const FilterNav = (props: any) => {
       <ul
         className={`px-2 divide-y-2 ${
           open ? "" : "hidden"
-        } lg:block lg:divide-y-2 lg:m-6`}
+        } lg:block lg:divide-y-2 lg:divide-gray-900 lg:m-6`}
       >
         <li
           className="text-[1.5rem] h-[3rem] leading-[3rem] cursor-pointer active:bg-gray-300"

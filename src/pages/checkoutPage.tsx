@@ -2,9 +2,9 @@ import React from "react";
 
 function CheckoutPage() {
   return (
-    <>
-      <div>最后的结算页面: 需要双向绑定数据</div>
-    </>
+    <div className="text-center text-[3rem] h-[40rem]">
+      <p className="leading-[40rem]">Thank you for purchasing!</p>
+    </div>
   );
 }
 
