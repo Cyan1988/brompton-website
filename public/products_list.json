@@ -1,0 +1,90 @@
+[
+    {
+        "title": "A Line - 2022",
+        "img_url": "https://www-checkout.brompton.com/catalog/resized/b/r/brompton_a_line_white_with_reflectors.jpg",
+        "price": "£899.00",
+        "weight": "11.50 Kg",
+        "text": "3 Speed • Reflectors • Pump",
+        "series": "A Line"
+    },
+    {
+        "title": "C Line Explore - Black",
+        "img_url": "https://www-checkout.brompton.com/catalog/resized/m/y/my23-h6l-mgr-rgr-fcb-sp6-bcl-zp.png",
+        "price": "From £1,415.00",
+        "weight": "12.20 Kg",
+        "text": "6 Speed • Mudguards • Zefal Pump",
+        "series": "C Line"
+    },
+    {
+        "title": "C Line Urban - Black",
+        "img_url": "https://www-checkout.brompton.com/catalog/resized/r/a/racing_green___mid_bar___reflector__side_2__4.jpg",
+        "price": "£1,250.00",
+        "weight": "11.35 Kg",
+        "text": "2 Speed • Mudguards • Zefal Pump",
+        "series": "C Line"
+    },
+    {
+        "title": "C Line Explore",
+        "img_url": "https://www-checkout.brompton.com/catalog/resized/c/-/c-line-explore-reflectors-housered-uk.jpg",
+        "price": "£1,350.00",
+        "weight": "12.10 Kg",
+        "text": "6 Speed • Mudguards • Brompton Saddle",
+        "series": "C Line"
+    },
+    {
+        "title": "Electric C Line Explore",
+        "img_url": "https://www-checkout.brompton.com/catalog/resized/m/a/matcha_green-m6lkmbkgkrbkgkefcbkavyksp6kcelkpm-1__dynamo_1.jpg",
+        "price": "£2,995.00",
+        "weight": "17.40 Kg",
+        "text": "6 Speed • Mudguards • Range 20-45 miles",
+        "series": "C Line"
+    },
+    {
+        "title": "A Line",
+        "img_url": "https://www-checkout.brompton.com/catalog/resized/m/y/my23_a_line_papyrus_white.jpg",
+        "price": "£950.00",
+        "weight": "11.50 Kg",
+        "text": "3 Speed • Reflectors • Pump",
+        "series": "A Line"
+    },
+    {
+        "title": "Electric P Line Urban with Roller Frame",
+        "img_url": "https://www-checkout.brompton.com/catalog/resized/e/l/electric-p-line-plp-with-roller3.jpg",
+        "price": "£3,785.00",
+        "weight": "15.90 Kg",
+        "text": "4 speed • Full charge in 4 hours • Up to 70-kilometre range",
+        "series": "P Line"
+    },
+    {
+        "title": "C Line Urban with Battery Lighting",
+        "img_url": "https://www-checkout.brompton.com/catalog/resized/1/2/123_4.jpg",
+        "price": "£1,329.00",
+        "weight": "11.26 Kg",
+        "text": "2 Speed • Mudguards • Brompton Saddle",
+        "series": "C Line"
+    },
+    {
+        "title": "P Line Urban",
+        "img_url": "https://www-checkout.brompton.com/catalog/resized/p/_/p_line_urban_black_mid_bat4.jpg",
+        "price": "£2,355.00",
+        "weight": "9.74 Kg",
+        "text": "4 Speed • Mudguards • Superlight",
+        "series": "P Line"
+    },
+    {
+        "title": "P Line Urban with Roller Frame",
+        "img_url": "https://www-checkout.brompton.com/catalog/resized/p/_/p_line_urban_roller_grey_mid_bat4.jpg",
+        "price": "£2,445.00",
+        "weight": "10.14 Kg",
+        "text": "4 Speed • Mudguards • Superlight",
+        "series": "P Line"
+    },
+    {
+        "title": "C Line Explore with Battery Lighting",
+        "img_url": "https://www-checkout.brompton.com/catalog/resized/c/-/c-line-explore-battery-hr.jpg",
+        "price": "£1,484.00",
+        "weight": "12.11 Kg",
+        "text": "6 Speed • Mudguards • Brompton Saddle",
+        "series": "C Line"
+    }
+]
