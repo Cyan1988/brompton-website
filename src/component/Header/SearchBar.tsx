@@ -42,9 +42,7 @@ function SearchBar(props: any) {
       </div>
       <div>Recommend List</div>
       <button className="bg-transparent hover:bg-slate-500 text-black font-semibold hover:text-white w-[50%] h-[20%] m-auto border border-black hover:border-transparent rounded">
-        <Link to="checkout" className="align-middle">
-          Search
-        </Link>
+        <Link to="/">Search</Link>
       </button>
     </div>
   );
