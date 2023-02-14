@@ -23,7 +23,7 @@ function ProductsDetailPage() {
   const detailList = itemList.filter((item) => item.id === params.id);
   const view = detailList[0];
 
-  // 改变tailwindCSS背景色
+  // 改变tailwindCSS背景色, 这个就不用状态设置了
   function bgTheme() {
     if (view.series === "A Line") {
       return "bg-teal-600";
@@ -37,29 +37,40 @@ function ProductsDetailPage() {
   }
 
   return (
-    <div className="grid grid-cols-2 h-[30rem]">
-      <div className="bg-zinc-500">
-        <img src={view.img_url} alt=""></img>
+    <div className="grid grid-rows-2 md:grid-rows-none md:grid-cols-5">
+      {/* 左侧大图片 */}
+      <div className="bg-gray-100 md:col-span-3">
+        <img className="w-[60rem] mx-auto my-6" src={view.img_url} alt=""></img>
       </div>
-      <div className="grid grid-rows-2 text-slate-50">
-        <div className={`${bgTheme()}`}>
+      {/* 右侧详情 */}
+      <div className="grid grid-rows-2 md:col-span-2 text-slate-50">
+        <div className={`${bgTheme()} grid grid-rows-2`}>
           <div>
-            <img src={require(`../images/${view.logo}`)} alt=""></img>
+            <img
+              className="h-[7rem] mx-auto mt-8"
+              src={require(`../images/${view.logo}`)}
+              alt=""
+            ></img>
           </div>
-          <div className="p-4">
-            <p>{view.details}</p>
-            <p>{view.text}</p>
+          <div className="py-5 px-10">
+            <p className="text-[1.25rem]">{view.details}</p>
+            <p className="pt-5">{view.text}</p>
           </div>
         </div>
-        <div className="text-black">
-          <div>Quantity</div>
-          <div>
-            <span>
-              {view.price}-{view.weight}
-            </span>
+        <div className="bg-zinc-200 text-slate-900 text-center grid grid-rows-3">
+          <div className="font-bold text-[1.5rem] my-auto">
+            Quantity: 这里设置状态
           </div>
-          <div>
-            <button>Add to Basket</button>
+          <div className="my-auto">
+            <span className="font-bold text-[1.25rem] mr-6">
+              Price: {view.price}
+            </span>
+            <span className="align-text-bottom">Weight: {view.weight}</span>
+          </div>
+          <div className="my-auto">
+            <button className="bg-slate-900 hover:bg-slate-500 text-[1.25rem] text-slate-200 font-semibold hover:text-white w-[30%] h-[2.75rem] m-auto border border-black hover:border-transparent rounded">
+              Add to Basket
+            </button>
           </div>
         </div>
       </div>

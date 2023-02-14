@@ -1,5 +1,6 @@
 import React from "react";
 import { useRoutes } from "react-router";
+import { Spin } from "antd";
 
 export default function BpRouter() {
   const element = useRoutes([
@@ -40,7 +41,7 @@ const LazyLoad = (path: string) => {
       <React.Suspense
         fallback={
           <div className="text-center h-[40rem] leading-[40rem]">
-            Loading Now...
+            <Spin /> Loading Now...
           </div>
         }
       >

@@ -6,8 +6,8 @@
 
 - [ ] 購物車數據交互
 - [ ] 搜索數據交互
-- [ ] 商品詳情數據交互
-- [ ] 嬾加載 Loading 頁面樣式
+- [x] 商品詳情數據交互
+- [x] 嬾加載 Loading 頁面樣式
 - [ ] Contact About Map Login 等其他靜態頁面
 - [ ] 語法優化、組件修改
 
@@ -27,6 +27,3 @@ Framework:
 1. React
 2. React-Router
 3. React-Redux Toolkit (不一定用)
-
-Others:
-Axios (不一定用)
