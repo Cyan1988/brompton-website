@@ -26,4 +26,4 @@ Framework:
 
 1. React
 2. React-Router
-3. React-Redux Toolkit (不一定用)
+3. React-Redux Toolkit
