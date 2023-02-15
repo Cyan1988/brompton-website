@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useCallback, useContext, useEffect, useState } from "react";
 import { Card } from "antd";
 import { List, ConfigProvider } from "antd";
 import productsList from "../../data/products_list.json";
@@ -39,19 +39,17 @@ const ProductsShow = (props: any) => {
       : setShowList(filterSeries);
   }, [seriesName, itemList]);
 
-  console.log("Series筛选", showList);
-
   // 筛选搜索的数据
   useEffect(() => {
     const filterTitles = itemList.filter((item) => {
       return (
         result !== "" && item.title.toUpperCase().includes(result.toUpperCase())
       );
-    }, []);
+    });
     setShowList(filterTitles);
-  }, [itemList, result, setShowList]);
+  }, [itemList, result]);
 
-  console.log("搜索筛选", showList);
+  console.log(showList);
 
   return (
     // 修改组件默认主题色

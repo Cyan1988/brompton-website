@@ -36,6 +36,10 @@ export default function BpRouter() {
       path: "/shop/result/:search",
       element: LazyLoad("productsPage"),
     },
+    {
+      path: "/shop/result/",
+      element: LazyLoad("productsPage"),
+    },
   ]);
   return element;
 }

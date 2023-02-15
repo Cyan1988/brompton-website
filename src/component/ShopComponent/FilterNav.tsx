@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useCallback, useEffect } from "react";
 import products_list from "../../data/products_list.json";
 
 const FilterNav = (props: any) => {
@@ -31,10 +31,10 @@ const FilterNav = (props: any) => {
   const { getSeriesName } = props;
   const [seriesName, setSeriesName] = useState<string>("All Series");
   // 待页面渲染完成后执行父组件修改状态的方法的监听，[]里的是依赖，需要依赖变化才会触发useEffect的重新渲染
-  useEffect(() => {
+
+  useCallback(() => {
     getSeriesName(seriesName);
-    console.log("我是父组件的EFFECT");
-  });
+  }, [seriesName, getSeriesName]);
 
   return (
     <div className="bg-neutral-200 text-[1.25rem] p-3  lg:pt-6 lg:col-start-1 lg:col-end-1">
