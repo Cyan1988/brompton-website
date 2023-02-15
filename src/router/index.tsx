@@ -10,7 +10,7 @@ export default function BpRouter() {
     },
     {
       path: "*",
-      element: LazyLoad("homePage"),
+      element: LazyLoad("notFoundPage"),
     },
     {
       path: "/home",
@@ -27,6 +27,10 @@ export default function BpRouter() {
     {
       path: "/shop/detail/:id",
       element: LazyLoad("productsDetailPage"),
+    },
+    {
+      path: "/shop/result/:search",
+      element: LazyLoad("productsPage"),
     },
   ]);
   return element;

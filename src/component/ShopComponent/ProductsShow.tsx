@@ -1,10 +1,14 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useLayoutEffect } from "react";
 import { Card } from "antd";
 import { List, ConfigProvider } from "antd";
 import productsList from "../../data/products_list.json";
 import { SeriesContext } from "../../pages/productsPage";
 
-const ProductsShow: React.FC = (props: any) => {
+const ProductsShow = (props: any) => {
+  // 获取父组件的路由参数
+  const { result } = props;
+  console.log(result);
+
   // 拿不到后台数据接口，用手写JSON代替一下
   const itemList: {
     title: string;
@@ -26,7 +30,7 @@ const ProductsShow: React.FC = (props: any) => {
   const seriesName = useContext(SeriesContext);
 
   // 通过filter筛选出符合series条件的数组，useEffect 让函数在页面渲染后执行
-  useEffect(() => {
+  useLayoutEffect(() => {
     const filterSeries = itemList.filter((item) => {
       return item.series === seriesName;
     });
@@ -35,6 +39,18 @@ const ProductsShow: React.FC = (props: any) => {
       ? setShowList(itemList)
       : setShowList(filterSeries);
   }, [seriesName, itemList]);
+
+  // 筛选搜索的数据
+  useEffect(() => {
+    const filterTitles = itemList.filter((item) => {
+      return (
+        result !== "" && item.title.toUpperCase().includes(result.toUpperCase())
+      );
+    }, []);
+    console.log(filterTitles);
+
+    setShowList(filterTitles);
+  }, [itemList, result, setShowList]);
 
   return (
     // 修改组件默认主题色

@@ -40,7 +40,11 @@ function ProductsDetailPage() {
     <div className="grid grid-rows-2 md:grid-rows-none md:grid-cols-5">
       {/* 左侧大图片 */}
       <div className="bg-gray-100 md:col-span-3">
-        <img className="w-[60rem] mx-auto my-6" src={view.img_url} alt=""></img>
+        <img
+          className="h-[50rem] object-cover mx-auto my-6"
+          src={view.img_url}
+          alt=""
+        ></img>
       </div>
       {/* 右侧详情 */}
       <div className="grid grid-rows-2 md:col-span-2 text-slate-50">

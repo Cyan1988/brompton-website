@@ -28,7 +28,7 @@ const FilterNav = (props: any) => {
   const [open, setOpen] = useState(false);
 
   // 子组件接收参数，传递数据给父组件
-  let { getSeriesName } = props;
+  const { getSeriesName } = props;
   const [seriesName, setSeriesName] = useState<string>("All Series");
   // 待页面渲染完成后执行父组件修改状态的方法的监听，[]里的是依赖，需要依赖变化才会触发useEffect的重新渲染
   useEffect(() => {

@@ -12,10 +12,10 @@ const Header: React.FC = () => {
     setShow(!show);
   };
 
-  const [search, setSearch] = useState(false);
-
-  const getSetSearch = (search: boolean) => {
-    setSearch(!search);
+  // 搜索的状态
+  const [searchShow, setSearchShow] = useState(false);
+  const getSetSearchShow = (searchShow: boolean) => {
+    setSearchShow(!searchShow);
   };
 
   return (
@@ -105,7 +105,7 @@ const Header: React.FC = () => {
               </Link>
             </div>
 
-            {/* 右上角两个小图标 market search */}
+            {/* 右上角两个小图标 location search */}
             <div>
               <ul className="flex gap-3">
                 <li>
@@ -123,7 +123,7 @@ const Header: React.FC = () => {
                     src={require("../../icons/search.png")}
                     alt="search"
                     onClick={() => {
-                      setSearch(!search);
+                      setSearchShow(!searchShow);
                     }}
                   ></img>
                 </li>
@@ -192,7 +192,7 @@ const Header: React.FC = () => {
       <Cart show={show} getSetShow={getSetShow} />
 
       {/* 搜索框 */}
-      <SearchBar search={search} getSetSearch={getSetSearch} />
+      <SearchBar searchShow={searchShow} getSetSearchShow={getSetSearchShow} />
 
       {/* 移动端子菜单, 以后会优化删除 */}
       <div
