@@ -33,6 +33,7 @@ const FilterNav = (props: any) => {
   // 待页面渲染完成后执行父组件修改状态的方法的监听，[]里的是依赖，需要依赖变化才会触发useEffect的重新渲染
   useEffect(() => {
     getSeriesName(seriesName);
+    console.log("我是父组件的EFFECT");
   }, [seriesName, getSeriesName]);
 
   return (
