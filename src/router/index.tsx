@@ -9,7 +9,11 @@ export default function BpRouter() {
       element: LazyLoad("homePage"),
     },
     {
-      path: "*",
+      path: "/brompton-website",
+      element: LazyLoad("homePage"),
+    },
+    {
+      path: "/*",
       element: LazyLoad("notFoundPage"),
     },
     {

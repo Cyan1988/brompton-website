@@ -17,8 +17,6 @@ function ProductsDetailPage() {
     id: string;
   }[] = productsList;
 
-  // 放弃axios，改回本地json读取。因为axios总是会先返回一个空数组，使得state的类型总有一个undefined，结果就是undefined不存在property，不知道该怎么解决，或许有朝一日可以明白
-
   // 踩坑：filter返回的是数组对象，我们需要提取整个数组对象的第一个
   const detailList = itemList.filter((item) => item.id === params.id);
   const view = detailList[0];

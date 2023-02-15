@@ -34,7 +34,7 @@ const FilterNav = (props: any) => {
   useEffect(() => {
     getSeriesName(seriesName);
     console.log("我是父组件的EFFECT");
-  }, [seriesName, getSeriesName]);
+  });
 
   return (
     <div className="bg-neutral-200 text-[1.25rem] p-3  lg:pt-6 lg:col-start-1 lg:col-end-1">
