@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { useAppDispatch } from "../../redux/hooks";
 import { result } from "../../redux/feature/filterSlice";
+import productsList from "../../data/products_list.json";
 
 const FilterNav = () => {
   // 控制下拉菜單展開的狀態
   const [open, setOpen] = useState(false);
 
-  const list = useAppSelector((state) => state.filterList);
+  // redux toolkit 派發方法
   const dispatch = useAppDispatch();
 
   // 創建方法：根據某個property對數組去重，獲得不重複的series name，用於遍歷出filter的選項
@@ -54,22 +55,20 @@ const FilterNav = () => {
       >
         <li
           className="text-[1.5rem] h-[3rem] leading-[3rem] cursor-pointer active:bg-gray-300"
-          id="All Series"
-          onClick={() => {
-            dispatch(result(" "));
-            console.log(result(" "));
+          id="Line"
+          onClick={(e) => {
+            dispatch(result(e.currentTarget.id));
           }}
         >
           All
         </li>
-        {unique(list, "series").map((item) => (
+        {unique(productsList, "series").map((item) => (
           <div
             className="text-[1.5rem] h-[3rem] leading-[3rem] cursor-pointer active:bg-gray-300"
             key={item.id}
             id={item.series}
             onClick={(e) => {
               dispatch(result(e.currentTarget.id));
-              console.log(e.currentTarget.id, result(e.currentTarget.id));
             }}
           >
             {item.series}

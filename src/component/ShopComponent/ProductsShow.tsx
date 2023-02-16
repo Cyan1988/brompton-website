@@ -1,13 +1,10 @@
 import { Card } from "antd";
 import { List, ConfigProvider } from "antd";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { filterSelector } from "../../redux/feature/filterSlice";
+import { useAppSelector } from "../../redux/hooks";
 
 const ProductsShow = () => {
-  const list = useAppSelector((state) => state.filterList);
-  const dispatch = useAppDispatch();
-
-  console.log("list", list);
+  // 產品顯示界面不需要派發，只需要接收數據進行狀態渲染
+  const list = useAppSelector((state) => state.filter);
 
   // Ant Design卡片组件
   const { Meta } = Card;

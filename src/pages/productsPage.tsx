@@ -1,4 +1,4 @@
-import FilterNav from "../component/ShopComponent/FilterNav";
+import FilterNav from "../component/ShopComponent/FilterSider";
 import ProductsShow from "../component/ShopComponent/ProductsShow";
 
 function ProductsPage() {
