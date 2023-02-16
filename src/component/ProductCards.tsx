@@ -3,7 +3,6 @@ import products_list from "../data/products_list.json";
 
 // 涉及到组件库的配合、样式修改和变化的问题不作为组件使用
 
-// 拿不到后台数据接口，用手写JSON代替一下
 const itemList: {
   title: string;
   img_url: string;

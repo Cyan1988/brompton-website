@@ -1,40 +1,19 @@
-import { useState, useCallback, useEffect } from "react";
-import products_list from "../../data/products_list.json";
+import { useState } from "react";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { result } from "../../redux/slice/filterSlice";
 
-const FilterNav = (props: any) => {
-  // 获取需要的数据
-  const itemList: {
-    title: string;
-    img_url: string;
-    price: string;
-    weight: string;
-    text: string;
-    series: string;
-  }[] = products_list;
-
-  // 得到所有的series name
-  const allSeriesList = itemList.map((item) => {
-    return item.series;
-  });
-
-  // 过滤重复的数据的函数
-  function unique(arr: string[]) {
-    return Array.from(new Set(arr));
-  }
-  // 得到不重复的seriesList
-  const seriesList = unique(allSeriesList);
-
-  // 控制下拉菜单的状态
+const FilterNav = () => {
+  // 控制下拉菜單展開的狀態
   const [open, setOpen] = useState(false);
 
-  // 子组件接收参数，传递数据给父组件
-  const { getSeriesName } = props;
-  const [seriesName, setSeriesName] = useState<string>("All Series");
-  // 待页面渲染完成后执行父组件修改状态的方法的监听，[]里的是依赖，需要依赖变化才会触发useEffect的重新渲染
+  const list = useAppSelector((state) => state.filterList);
+  const dispatch = useAppDispatch();
 
-  useCallback(() => {
-    getSeriesName(seriesName);
-  }, [seriesName, getSeriesName]);
+  // 創建方法：根據某個property對數組去重，獲得不重複的series name，用於遍歷出filter的選項
+  function unique(arr: Array<any>, val: PropertyKey) {
+    const res = new Map();
+    return arr.filter((item) => !res.has(item[val]) && res.set(item[val], 1));
+  }
 
   return (
     <div className="bg-neutral-200 text-[1.25rem] p-3  lg:pt-6 lg:col-start-1 lg:col-end-1">
@@ -76,23 +55,24 @@ const FilterNav = (props: any) => {
         <li
           className="text-[1.5rem] h-[3rem] leading-[3rem] cursor-pointer active:bg-gray-300"
           id="All Series"
-          onClick={(e) => {
-            setSeriesName(e.currentTarget.id);
+          onClick={() => {
+            dispatch(result(" "));
+            console.log(result(" "));
           }}
         >
           All
         </li>
-        {seriesList.map((item) => (
+        {unique(list, "series").map((item) => (
           <div
             className="text-[1.5rem] h-[3rem] leading-[3rem] cursor-pointer active:bg-gray-300"
-            key={item}
-            id={item}
-            // 踩坑：1.key值无法被读取 2.需要使用 currentTarget
+            key={item.id}
+            id={item.series}
             onClick={(e) => {
-              setSeriesName(e.currentTarget.id);
+              dispatch(result(e.currentTarget.id));
+              console.log(e.currentTarget.id, result(e.currentTarget.id));
             }}
           >
-            {item}
+            {item.series}
           </div>
         ))}
       </ul>

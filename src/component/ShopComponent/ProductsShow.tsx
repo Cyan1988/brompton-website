@@ -1,55 +1,16 @@
-import React, { useCallback, useContext, useEffect, useState } from "react";
 import { Card } from "antd";
 import { List, ConfigProvider } from "antd";
-import productsList from "../../data/products_list.json";
-import { SeriesContext } from "../../pages/productsPage";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { filterSelector } from "../../redux/slice/filterSlice";
 
-const ProductsShow = (props: any) => {
-  // 获取父组件的路由参数
-  const { result } = props;
+const ProductsShow = () => {
+  const list = useAppSelector((state) => state.filterList);
+  const dispatch = useAppDispatch();
 
-  // 拿不到后台数据接口，用手写JSON代替一下
-  const itemList: {
-    title: string;
-    img_url: string;
-    price: string;
-    weight: string;
-    text: string;
-    series: string;
-    id: string;
-  }[] = productsList;
+  console.log("list", list);
 
-  // 卡片组件
+  // Ant Design卡片组件
   const { Meta } = Card;
-
-  // 渲染的状态
-  const [showList, setShowList] = useState(itemList);
-
-  // 接收父组件的数据
-  const seriesName = useContext(SeriesContext);
-
-  // 通过filter筛选出符合series条件的数组，useEffect 让函数在页面渲染后执行
-  useEffect(() => {
-    const filterSeries = itemList.filter((item) => {
-      return item.series === seriesName;
-    });
-
-    filterSeries.length === 0
-      ? setShowList(itemList)
-      : setShowList(filterSeries);
-  }, [seriesName, itemList]);
-
-  // 筛选搜索的数据
-  useEffect(() => {
-    const filterTitles = itemList.filter((item) => {
-      return (
-        result !== "" && item.title.toUpperCase().includes(result.toUpperCase())
-      );
-    });
-    setShowList(filterTitles);
-  }, [itemList, result]);
-
-  console.log(showList);
 
   return (
     // 修改组件默认主题色
@@ -61,9 +22,7 @@ const ProductsShow = (props: any) => {
       }}
     >
       {/* 左上角系列名 */}
-      <div className="absolute text-[2rem] pt-1 ml-[5%] sm:ml-[4%] lg:ml-[18.2%] z-10">
-        {seriesName}
-      </div>
+      <div className="absolute text-[2rem] pt-1 ml-[5%] sm:ml-[4%] lg:ml-[18.2%] z-10"></div>
       {/* Grid List 组件 */}
       <List
         className="bg-neutral-200 pt-6 md: col-start-2 md:col-end-7"
@@ -76,7 +35,7 @@ const ProductsShow = (props: any) => {
           xl: 3,
           xxl: 3,
         }}
-        dataSource={showList} // 这个参数会收到传来的数据
+        dataSource={list} // 这个参数会收到传来的数据
         pagination={{
           pageSize: 6,
           className: "float-none text-center pb-6",
