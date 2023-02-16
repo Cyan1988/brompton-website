@@ -55,7 +55,7 @@ const FilterNav = () => {
       >
         <li
           className="text-[1.5rem] h-[3rem] leading-[3rem] cursor-pointer active:bg-gray-300"
-          id="Line"
+          id=" "
           onClick={(e) => {
             dispatch(result(e.currentTarget.id));
           }}
