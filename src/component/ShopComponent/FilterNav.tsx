@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { result } from "../../redux/slice/filterSlice";
+import { result } from "../../redux/feature/filterSlice";
 
 const FilterNav = () => {
   // 控制下拉菜單展開的狀態

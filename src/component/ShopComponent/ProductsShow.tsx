@@ -1,7 +1,7 @@
 import { Card } from "antd";
 import { List, ConfigProvider } from "antd";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { filterSelector } from "../../redux/slice/filterSlice";
+import { filterSelector } from "../../redux/feature/filterSlice";
 
 const ProductsShow = () => {
   const list = useAppSelector((state) => state.filterList);
