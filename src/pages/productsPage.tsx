@@ -6,7 +6,9 @@ import { result } from "../redux/feature/filterSlice";
 import { useAppDispatch } from "../redux/hooks";
 
 function ProductsPage() {
+  // 路由傳參
   let { search } = useParams();
+  // 修改類型並保證輸出結果
   let searchResult = () => {
     if (search === undefined) {
       return " ";
@@ -14,8 +16,8 @@ function ProductsPage() {
       return search as string;
     }
   };
-  console.log(searchResult());
 
+  // 派發
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(result(`${searchResult()}`));
