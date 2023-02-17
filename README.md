@@ -4,9 +4,11 @@
 
 ### TodoList：
 
-- [x] 數據交互全部用 redux 重做 (數據交互已完成)
+- [x] search, filterSidebar 數據交互
+- [ ] 購物車數據交互
 - [ ] Contact About Map Login 等其他靜態頁面的配置
-- [ ] 語法優化、样式修改、部分组件重做
+- [ ] 語法優化、样式修改
+- [ ] header 移動端和 homepage carousel 重構
 
 ### Tech Stack：
 
