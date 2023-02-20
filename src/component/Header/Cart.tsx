@@ -1,9 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useAppSelector, useAppDispatch } from "../../redux/hooks";
+import {
+  incrementQuantity,
+  decrementQuantity,
+  removeItem,
+} from "../../redux/feature/cartSlice";
 
 function Cart(props: any) {
   // 设置开关状态
   let { show, getSetShow } = props;
+
+  // 獲取redux的狀態
+  const cart = useAppSelector((state) => state.cart);
+  const dispatch = useAppDispatch();
+
+  const getTotal = () => {
+    let totalPrice = 0;
+    cart.cart.forEach((item) => {
+      let cleanPriceStr = item.price.replace("£", "");
+      let priceNoCommasStr = cleanPriceStr.replace(/,/g, "");
+      let price = Number(priceNoCommasStr);
+      totalPrice += price * item.quantity;
+    });
+    return { totalPrice };
+  };
 
   return (
     <div
@@ -27,10 +48,48 @@ function Cart(props: any) {
         ></img>
       </div>
       <div>
-        Your basket is empty.
-        <br />
-        （这里需要数据更新）
+        {cart.cart.length === 0 ? (
+          <div>Your Basket is Empty.</div>
+        ) : (
+          <div>
+            {cart.cart.map((item) => (
+              <div key={item.id}>
+                {item.title} ----{" "}
+                <button
+                  onClick={() => {
+                    dispatch(decrementQuantity({ id: item.id }));
+                  }}
+                >
+                  --
+                </button>
+                {item.quantity}{" "}
+                <button
+                  onClick={() => {
+                    dispatch(incrementQuantity({ id: item.id }));
+                  }}
+                >
+                  ++
+                </button>
+                <button
+                  onClick={() => {
+                    dispatch(removeItem(item.id));
+                  }}
+                >
+                  delete
+                </button>
+              </div>
+            ))}
+            <div>
+              Total Amount:
+              {getTotal().totalPrice.toLocaleString("en-GB", {
+                style: "currency",
+                currency: "GBP",
+              })}
+            </div>
+          </div>
+        )}
       </div>
+
       <button className="bg-transparent hover:bg-slate-500 text-black font-semibold hover:text-white w-[50%] h-[20%] m-auto border border-black hover:border-transparent rounded ">
         <Link to="checkout">CHECK OUT</Link>
       </button>

@@ -8,18 +8,20 @@
         "series": "A Line",
         "details": "From A to B. The essential Brompton. The ride, the compact fold, the easy-to-store.",
         "logo": "icon_A_line.svg",
-        "id": "1"
+        "id": "1",
+        "quantity": 0
     },
     {
         "title": "C Line Explore - Black",
         "img_url": "https://www-checkout.brompton.com/catalog/resized/m/y/my23-h6l-mgr-rgr-fcb-sp6-bcl-zp.png",
-        "price": "From £1,415.00",
+        "price": "£1,415.00",
         "weight": "12.20 Kg",
         "text": "6 Speed • Mudguards • Zefal Pump",
         "series": "C Line",
         "details": "Load this 6-speed all-steel workhorse with luggage and a rack for all-weather commuting or touring, then go explore. Some owners have cycled these around the world. Most use them to improve their day-to-day.",
         "logo": "icon_C.svg",
-        "id": "2"
+        "id": "2",
+        "quantity": 0
     },
     {
         "title": "C Line Urban - Black",
@@ -30,7 +32,8 @@
         "series": "C Line",
         "details": "With 2 gears, the C Line Urban is lighter to ride and carry than all other C Line models. And with one gear trigger, it's simple to use. Those that are up and down stairs, walking along platforms and in and out of lifts will appreciate the benefits of this bike’s Iower weight.",
         "logo": "icon_C.svg",
-        "id": "3"
+        "id": "3",
+        "quantity": 0
     },
     {
         "title": "C Line Explore",
@@ -41,7 +44,8 @@
         "series": "C Line",
         "details": "The Classic All-Steel Foldable Bike. The 6 speed do-it-all workhorse - geared up to go further. Covers all contours, at home or further afield.",
         "logo":"icon_C.svg",
-        "id": "4"
+        "id": "4",
+        "quantity": 0
     },
     {
         "title": "Electric C Line Explore",
@@ -52,7 +56,8 @@
         "series": "C Line",
         "details": "The most compact folding e-bike. Proudly handbuilt in London with a robust steel frame.",
         "logo": "icon_C.svg",
-        "id": "5"
+        "id": "5",
+        "quantity": 0
     },
     {
         "title": "A Line",
@@ -63,7 +68,8 @@
         "series": "A Line",
         "details": "New Shade! Powder-coated papyrus white steel Frame. The original 3-part fold. Three easy-to-use hub gears. From A to B. The essential Brompton folding bike.",
         "logo":"icon_A_line.svg",
-        "id": "6"
+        "id": "6",
+        "quantity": 0
     },
     {
         "title": "Electric P Line Urban with Roller Frame",
@@ -74,7 +80,8 @@
         "series": "P Line",
         "details": "The compact Superlight 4-speed gearing system with smart pedal assist - everything needed to connect the city and beyond.",
         "logo": "icon_P.svg",
-        "id": "7"
+        "id": "7",
+        "quantity": 0
     },
     {
         "title": "C Line Urban with Battery Lighting",
@@ -85,7 +92,8 @@
         "series": "C Line",
         "details": "Original design refined for modern cities. The minimalist 2 speed C Line. Simple set up - lighter weight. For flatter cities or strong legs in hilly places.",
         "logo": "icon_C.svg",
-        "id": "8"
+        "id": "8",
+        "quantity": 0
     },
     {
         "title": "P Line Urban",
@@ -96,7 +104,8 @@
         "series": "P Line",
         "details": "Performance. The lightweight transformation. Superlight compact 4-speed gear system fine-tuned for city riding. Covers all contours.",
         "logo": "icon_P.svg",
-        "id": "9"
+        "id": "9",
+        "quantity": 0
     },
     {
         "title": "P Line Urban with Roller Frame",
@@ -107,7 +116,8 @@
         "series": "P Line",
         "details": "Performance. The lightweight transformation. Superlight compact 4-speed gear system fine-tuned for city riding. Covers all contours.",
         "logo": "icon_P.svg",
-        "id": "10"
+        "id": "10",
+        "quantity": 0
     },
     {
         "title": "C Line Explore with Battery Lighting",
@@ -118,7 +128,8 @@
         "series": "C Line",
         "details": "The Classic All-Steel Foldable Bike. The 6 speed do-it-all workhorse - geared up to go further. Covers all contours, at home or further afield.",
         "logo": "icon_C.svg",
-        "id": "11"
+        "id": "11",
+        "quantity": 0
     },
     {
         "title": "Electric P Line Urban",
@@ -129,6 +140,7 @@
         "series": "P Line",
         "details": "The compact Superlight 4-speed gearing system with smart pedal assist - everything needed to connect the city and beyond.",
         "logo": "icon_P.svg",
-        "id": "12"
+        "id": "12",
+        "quantity": 0
     }
 ]

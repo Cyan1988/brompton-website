@@ -5,7 +5,8 @@
 ### TodoList：
 
 - [x] search, filterSidebar 數據交互
-- [ ] 購物車數據交互
+- [x] 購物車數據交互
+- [ ] 購物車數據持久化 redux persist
 - [ ] Contact About Map Login 等其他靜態頁面的配置
 - [ ] 語法優化、样式修改
 - [ ] header 移動端和 homepage carousel 重構

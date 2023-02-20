@@ -1,10 +1,13 @@
 import { useParams } from "react-router";
 import productsList from "../data/products_list.json";
+import { useAppDispatch } from "../redux/hooks";
+import { addToCart } from "../redux/feature/cartSlice";
+import { useState } from "react";
 
 function ProductsDetailPage() {
-  // 获取动态路由传来的参数id
+  // 獲取路由傳來的參數id
   const params = useParams();
-
+  // 頁面本身的非數據内容的頁面渲染由其本身管理
   const itemList: {
     title: string;
     img_url: string;
@@ -17,29 +20,37 @@ function ProductsDetailPage() {
     id: string;
   }[] = productsList;
 
-  // 踩坑：filter返回的是数组对象，我们需要提取整个数组对象的第一个
+  // filter返回的是一個數組對象，我们需要的有且只有第一個
   const detailList = itemList.filter((item) => item.id === params.id);
   const view = detailList[0];
 
-  // 改变tailwindCSS背景色, 这个就不用状态设置了
+  // 設置函數通過tailwind改變背景色
   function bgTheme() {
-    if (view.series === "A Line") {
-      return "bg-teal-600";
-    }
-    if (view.series === "C Line") {
-      return "bg-red-600";
-    }
-    if (view.series === "P Line") {
-      return "bg-violet-900";
+    switch (true) {
+      case view.series === "A Line": {
+        return "bg-teal-600";
+      }
+      case view.series === "C Line": {
+        return "bg-red-600";
+      }
+      case view.series === "P Line": {
+        return "bg-violet-900";
+      }
     }
   }
+
+  // 商品數量的狀態
+  let [count, setCount] = useState(1);
+
+  // 以下是redux獲取數據
+  const dispatch = useAppDispatch();
 
   return (
     <div className="grid grid-rows-2 md:grid-rows-none md:grid-cols-5">
       {/* 左侧大图片 */}
       <div className="bg-gray-100 md:col-span-3">
         <img
-          className="h-[50rem] object-cover mx-auto my-6"
+          className="h-[42rem] object-cover mx-auto my-6"
           src={view.img_url}
           alt=""
         ></img>
@@ -49,7 +60,7 @@ function ProductsDetailPage() {
         <div className={`${bgTheme()} grid grid-rows-2`}>
           <div>
             <img
-              className="h-[7rem] mx-auto mt-8"
+              className="h-[6em] mx-auto mt-10"
               src={require(`../images/${view.logo}`)}
               alt=""
             ></img>
@@ -61,7 +72,22 @@ function ProductsDetailPage() {
         </div>
         <div className="bg-zinc-200 text-slate-900 text-center grid grid-rows-3">
           <div className="font-bold text-[1.5rem] my-auto">
-            Quantity: 这里设置状态
+            Quantity:
+            <button
+              onClick={() => {
+                count > 1 && setCount(count - 1);
+              }}
+            >
+              -
+            </button>
+            {count}
+            <button
+              onClick={() => {
+                setCount(count + 1);
+              }}
+            >
+              +
+            </button>
           </div>
           <div className="my-auto">
             <span className="font-bold text-[1.25rem] mr-6">
@@ -70,7 +96,20 @@ function ProductsDetailPage() {
             <span className="align-text-bottom">Weight: {view.weight}</span>
           </div>
           <div className="my-auto">
-            <button className="bg-slate-900 hover:bg-slate-500 text-[1.25rem] text-slate-200 font-semibold hover:text-white w-[30%] h-[2.75rem] m-auto border border-black hover:border-transparent rounded">
+            <button
+              className="bg-slate-900 hover:bg-slate-500 text-[1.25rem] text-slate-200 font-semibold hover:text-white w-[30%] h-[2.75rem] m-auto border border-black hover:border-transparent rounded"
+              onClick={() => {
+                dispatch(
+                  addToCart({
+                    id: view.id,
+                    title: view.title,
+                    img: view.img_url,
+                    price: view.price,
+                    quantity: count,
+                  })
+                );
+              }}
+            >
               Add to Basket
             </button>
           </div>

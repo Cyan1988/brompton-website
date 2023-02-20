@@ -1,14 +1,46 @@
+import { title } from "process";
 import { createSlice } from "@reduxjs/toolkit";
 
 const cartSlice = createSlice({
   name: "cart",
-  initialState: 0,
+  // 初始狀態為空數組
+  initialState: {
+    cart: [] as Array<any>,
+  },
   reducers: {
-    countAdd: (state, action) => {
-      state++;
+    addToCart: (state, action) => {
+      const itemInCart = state.cart.find(
+        (item) => item.id === action.payload.id
+      );
+      if (itemInCart) {
+        itemInCart.quantity += action.payload.quantity;
+      } else {
+        state.cart.push({ ...action.payload });
+      }
     },
-    countRemove: (state, action) => {
-      state--;
+    incrementQuantity: (state, action) => {
+      const item = state.cart.find((item) => item.id === action.payload.id);
+      item.quantity++;
+    },
+    decrementQuantity: (state, action) => {
+      const item = state.cart.find((item) => item.id === action.payload.id);
+      console.log(item);
+      if (item.quantity === 1) {
+        item.quantity = 1;
+      } else {
+        item.quantity--;
+      }
+    },
+    removeItem: (state, action) => {
+      const removeItem = state.cart.filter(
+        (item) => item.id !== action.payload
+      );
+      state.cart = removeItem;
     },
   },
 });
+
+export const { addToCart, incrementQuantity, decrementQuantity, removeItem } =
+  cartSlice.actions;
+
+export default cartSlice.reducer;
