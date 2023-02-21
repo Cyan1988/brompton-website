@@ -12,18 +12,20 @@ function Cart(props: any) {
   let { show, getSetShow } = props;
 
   // 獲取redux的狀態
-  const cart = useAppSelector((state) => state.cart);
+  const cart = useAppSelector((state) => state.cart.cart);
   const dispatch = useAppDispatch();
 
   const getTotal = () => {
     let totalPrice = 0;
-    cart.cart.forEach((item) => {
+    let totalQuantity = 0;
+    cart.forEach((item) => {
       let cleanPriceStr = item.price.replace("£", "");
       let priceNoCommasStr = cleanPriceStr.replace(/,/g, "");
       let price = Number(priceNoCommasStr);
+      totalQuantity += item.quantity;
       totalPrice += price * item.quantity;
     });
-    return { totalPrice };
+    return { totalPrice, totalQuantity };
   };
 
   return (
@@ -48,16 +50,16 @@ function Cart(props: any) {
         ></img>
       </div>
       <div>
-        {cart.cart.length === 0 ? (
+        {cart !== undefined && cart.length === 0 ? (
           <div>Your Basket is Empty.</div>
         ) : (
           <div>
-            {cart.cart.map((item) => (
+            {cart.map((item) => (
               <div key={item.id}>
                 {item.title} ----{" "}
                 <button
                   onClick={() => {
-                    dispatch(decrementQuantity({ id: item.id }));
+                    dispatch(decrementQuantity(item.id));
                   }}
                 >
                   --
@@ -65,7 +67,7 @@ function Cart(props: any) {
                 {item.quantity}{" "}
                 <button
                   onClick={() => {
-                    dispatch(incrementQuantity({ id: item.id }));
+                    dispatch(incrementQuantity(item.id));
                   }}
                 >
                   ++
@@ -86,6 +88,7 @@ function Cart(props: any) {
                 currency: "GBP",
               })}
             </div>
+            <div>Total items: {getTotal().totalQuantity}</div>
           </div>
         )}
       </div>
