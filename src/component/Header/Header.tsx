@@ -24,7 +24,7 @@ const Header: React.FC = () => {
       <nav
         className={`fixed z-20 w-full ${
           navOpen ? "h-screen" : ""
-        }  bg-gray-200 font-sans md:flex`}
+        }  bg-gray-100 font-sans md:flex`}
       >
         {/* 左上角logo */}
         <div className="ml-2">
@@ -80,7 +80,7 @@ const Header: React.FC = () => {
         <div
           className={`${
             navOpen ? "" : "hidden"
-          } bg-inherit h-full w-full px-7 py-4 md:flex md:justify-between md:px-1 md:py-3`}
+          } bg-inherit h-full w-full  px-7 py-4 md:flex md:justify-between md:px-1 md:py-3`}
         >
           <ul
             className="text-[1.25rem] md:inline-flex md:space-x-3"
