@@ -29,4 +29,4 @@ Framework:
 
 1. React
 2. React-Router
-3. React-Redux (Toolkit)
+3. React-Redux (Redux Toolkit, Redux Persist)
