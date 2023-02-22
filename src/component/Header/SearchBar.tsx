@@ -14,7 +14,7 @@ function SearchBar(props: any) {
     <div
       className={`fixed ${
         searchShow ? "grid" : "hidden"
-      } grid grid-rows-3 grid-cols-1 text-center justify-between w-[27rem] h-screen z-20 top-0 right-0 pt-24 bg-neutral-100`}
+      } grid grid-rows-3 grid-cols-1 justify-between w-full sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-[30%] h-screen z-20 top-0 right-0 pt-24 p-10 bg-neutral-100`}
     >
       <button
         className="absolute top-3 right-3"
@@ -22,7 +22,21 @@ function SearchBar(props: any) {
           getSetSearchShow(searchShow);
         }}
       >
-        Close
+        <svg
+          className="inline-block h-6"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
       </button>
       <div>
         <ConfigProvider
@@ -36,11 +50,46 @@ function SearchBar(props: any) {
             placeholder="input search text"
             allowClear
             onSearch={onSearch}
-            className="w-[70%]"
           />
         </ConfigProvider>
       </div>
-      <div>Recommend List</div>
+      <div>
+        <div className="text-sm">POPULAR SEARCHES</div>
+        <div className="grid grid-cols-2 pt-[2rem] text-2xl gap-2">
+          <span
+            className="cursor-pointer"
+            onClick={() => {
+              onSearch("C Line");
+            }}
+          >
+            C Line
+          </span>
+          <span
+            className="cursor-pointer"
+            onClick={() => {
+              onSearch("Explore");
+            }}
+          >
+            Explore
+          </span>
+          <span
+            className="cursor-pointer"
+            onClick={() => {
+              onSearch("Electric");
+            }}
+          >
+            Electric
+          </span>
+          <span
+            className="cursor-pointer"
+            onClick={() => {
+              onSearch("Urban");
+            }}
+          >
+            Urban
+          </span>
+        </div>
+      </div>
     </div>
   );
 }

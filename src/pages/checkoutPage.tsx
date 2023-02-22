@@ -1,9 +1,9 @@
-import React from "react";
-
-function CheckoutPage(props: any) {
+function CheckoutPage() {
   return (
-    <div className="text-center text-[3rem] h-[40rem]">
-      <p className="leading-[40rem]">Thank you for purchasing!</p>
+    <div className="flex items-center h-[30rem]">
+      <p className="mx-auto text-[1.5rem] md:text-[3rem]">
+        Thank you for purchasing!
+      </p>
     </div>
   );
 }

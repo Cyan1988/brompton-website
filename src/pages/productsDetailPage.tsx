@@ -25,16 +25,16 @@ function ProductsDetailPage() {
   const view = detailList[0];
 
   // 設置函數通過tailwind改變背景色
-  function bgTheme() {
+  function colorTheme() {
     switch (true) {
       case view.series === "A Line": {
-        return "bg-teal-600";
+        return "teal-600";
       }
       case view.series === "C Line": {
-        return "bg-red-600";
+        return "red-600";
       }
       case view.series === "P Line": {
-        return "bg-violet-900";
+        return "violet-900";
       }
     }
   }
@@ -46,18 +46,18 @@ function ProductsDetailPage() {
   const dispatch = useAppDispatch();
 
   return (
-    <div className="grid grid-rows-2 md:grid-rows-none md:grid-cols-5">
-      {/* 左侧大图片 */}
-      <div className="bg-gray-100 md:col-span-3">
+    <div className="grid grid-rows-2 items-center text-center bg-gray-100 lg:grid-rows-none lg:grid-cols-5">
+      <div className="lg:col-span-3">
+        {/* 左侧大图片 */}
         <img
-          className="h-[42rem] object-cover mx-auto my-6"
+          className="inline-block object-cover"
           src={view.img_url}
           alt=""
         ></img>
       </div>
       {/* 右侧详情 */}
-      <div className="grid grid-rows-2 md:col-span-2 text-slate-50">
-        <div className={`${bgTheme()} grid grid-rows-2`}>
+      <div className="grid grid-rows-2 lg:col-span-2 text-slate-50">
+        <div className={`bg-${colorTheme()} grid grid-rows-2`}>
           <div>
             <img
               className="h-[6em] mx-auto mt-10"
@@ -78,26 +78,50 @@ function ProductsDetailPage() {
                 count > 1 && setCount(count - 1);
               }}
             >
-              -
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className={`inline-block text-${colorTheme()} w-6 mx-2 align-sub `}
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm3 10.5a.75.75 0 000-1.5H9a.75.75 0 000 1.5h6z"
+                  clipRule="evenodd"
+                />
+              </svg>
             </button>
-            {count}
+            <span>{count}</span>
             <button
               onClick={() => {
                 setCount(count + 1);
               }}
             >
-              +
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className={`w-6 mx-2 text-${colorTheme()} align-sub inline-block`}
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 9a.75.75 0 00-1.5 0v2.25H9a.75.75 0 000 1.5h2.25V15a.75.75 0 001.5 0v-2.25H15a.75.75 0 000-1.5h-2.25V9z"
+                  clipRule="evenodd"
+                />
+              </svg>
             </button>
           </div>
           <div className="my-auto">
             <span className="font-bold text-[1.25rem] mr-6">
               Price: {view.price}
             </span>
-            <span className="align-text-bottom">Weight: {view.weight}</span>
+            <span className="align-text-bottom font-bold">
+              Weight: {view.weight}
+            </span>
           </div>
           <div className="my-auto">
             <button
-              className="bg-slate-900 hover:bg-slate-500 text-[1.25rem] text-slate-200 font-semibold hover:text-white w-[30%] h-[2.75rem] m-auto border border-black hover:border-transparent rounded"
+              className="bg-slate-900 hover:bg-slate-500 text-[1.25rem] text-slate-200 font-semibold hover:text-white w-[40%] h-[2.75rem] m-auto border border-black hover:border-transparent rounded"
               onClick={() => {
                 dispatch(
                   addToCart({

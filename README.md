@@ -7,9 +7,10 @@
 - [x] search, filterSidebar 數據交互
 - [x] 購物車數據交互
 - [x] 購物車數據持久化 redux persist，目前所有數據交互已全部完成，接下來進行組件重構和樣式修改
-- [ ] Contact About Map Login 等其他靜態頁面的配置
+- [x] header 修改，cart 和 detailPage 的樣式
+- [ ] Contact About Login 等其他靜態頁面的配置
+- [ ] carousel 重構
 - [ ] 語法優化、样式修改
-- [ ] header 移動端和 homepage carousel 重構
 
 ### Tech Stack：
 
