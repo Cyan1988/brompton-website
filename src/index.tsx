@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import ScrollToTop from "./component/ScrollToTop"; // 路由跳轉回到頁面頂部
 import { store, persistor } from "./redux/store";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
@@ -14,12 +15,12 @@ const root = ReactDOM.createRoot(
 root.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      {/* 路由模式 */}
       <BrowserRouter>
-        {/* 嚴格模式 */}
-        <StrictMode>
-          <App />
-        </StrictMode>
+        <ScrollToTop>
+          <StrictMode>
+            <App />
+          </StrictMode>
+        </ScrollToTop>
       </BrowserRouter>
     </PersistGate>
   </Provider>

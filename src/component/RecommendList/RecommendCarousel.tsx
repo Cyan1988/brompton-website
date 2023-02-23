@@ -3,9 +3,6 @@ import { Carousel, Card } from "antd";
 import products_list from "../../data/products_list.json";
 import "./arrow_style.css";
 
-// Antd的轮播图个性化有点痛苦，以后有空自己用tailwind写一个
-
-// 拿不到后台数据接口，用手写JSON代替一下
 const itemList: {
   title: string;
   img_url: string;
@@ -20,7 +17,6 @@ const { Meta } = Card;
 // 响应式的卡片轮播图
 const RecommendCarousel: React.FC = () => (
   <>
-    {/* 方法很傻逼，将就着用吧。以后重写一个响应式卡片轮播。难怪现在这种设计几乎消失了。 */}
     <div className="hidden xl:block">
       <Carousel
         autoplay
