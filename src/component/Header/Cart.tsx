@@ -14,6 +14,7 @@ function Cart(props: any) {
   const cart = useAppSelector((state) => state.cart.cart);
   const dispatch = useAppDispatch();
 
+  // 計算總價格和總數量，中間是字符串轉數字
   const getTotal = () => {
     let totalPrice = 0;
     let totalQuantity = 0;
@@ -159,6 +160,7 @@ function Cart(props: any) {
             to="checkout"
             onClick={() => {
               getSetCartOpen(cartOpen);
+              cart.map((item) => dispatch(removeItem(item.id)));
             }}
           >
             CHECK OUT

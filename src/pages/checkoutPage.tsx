@@ -1,11 +1,28 @@
-function CheckoutPage() {
-  return (
-    <div className="flex items-center h-[30rem]">
-      <p className="mx-auto text-[1.5rem] md:text-[3rem]">
-        Thank you for purchasing!
-      </p>
-    </div>
-  );
-}
+import React from "react";
+import { Button, ConfigProvider, Result } from "antd";
+import { Link } from "react-router-dom";
 
+const CheckoutPage: React.FC = () => (
+  <ConfigProvider
+    theme={{
+      token: {
+        colorPrimary: "gray",
+      },
+    }}
+  >
+    <Result
+      status="success"
+      title="Thank You for Purchasing!"
+      subTitle="We wish you a happy life and look forward to your next visit!"
+      extra={[
+        <Button>
+          <Link to="/">Go Home</Link>
+        </Button>,
+        <Button>
+          <Link to="/shop">Buy Again</Link>
+        </Button>,
+      ]}
+    />
+  </ConfigProvider>
+);
 export default CheckoutPage;
