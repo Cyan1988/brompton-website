@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useAppSelector } from "../../redux/hooks";
 import Cart from "./Cart";
 import SearchBar from "./SearchBar";
 
@@ -8,11 +9,19 @@ const Header: React.FC = () => {
   const [navOpen, setNavOpen] = useState(false);
   // 購物車開關
   const [cartOpen, setCartOpen] = useState(false);
-  // 父子通信，把show和修改show的方法传给子组件
+  // 購物車右上角數字，獲取公共狀態
+  const cart = useAppSelector((state) => state.cart.cart);
+  const getTotal = () => {
+    let totalQuantity = 0;
+    cart.forEach((item) => {
+      totalQuantity += item.quantity;
+    });
+    return { totalQuantity };
+  };
+  // 父子通信，把状态和修改状态的方法传给子组件
   const getSetCartOpen = (cartOpen: boolean) => {
     setCartOpen(!cartOpen);
   };
-
   // 搜索的状态
   const [searchShow, setSearchShow] = useState(false);
   const getSetSearchShow = (searchShow: boolean) => {
@@ -148,6 +157,14 @@ const Header: React.FC = () => {
               setCartOpen(!cartOpen);
             }}
           ></img>
+          {/* 購物車數量 */}
+          <span
+            className={`${
+              getTotal().totalQuantity === 0 ? "hidden" : "flex"
+            } absolute bg-slate-700 text-white text-xs  text-center leading-4 rounded-full top-0 md:top-4 right-7 xl:right-2 lg:right-1 md:right-0`}
+          >
+            <p className="px-1">{getTotal().totalQuantity}</p>
+          </span>
 
           {/* 移動端導航欄開關 */}
           <button

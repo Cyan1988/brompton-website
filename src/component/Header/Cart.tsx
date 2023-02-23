@@ -145,7 +145,7 @@ function Cart(props: any) {
       >
         <div>Total Quantity: {getTotal().totalQuantity}</div>
         <div>
-          Total Amount:
+          Total Amount:{" "}
           {getTotal().totalPrice.toLocaleString("en-GB", {
             style: "currency",
             currency: "GBP",
