@@ -40,6 +40,10 @@ export default function BpRouter() {
       path: "/shop/result/",
       element: LazyLoad("productsPage"),
     },
+    {
+      path: "/login",
+      element: LazyLoad("logInPage"),
+    },
   ]);
   return element;
 }
