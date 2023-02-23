@@ -14,6 +14,8 @@ const itemList: {
 // 卡片组件
 const { Meta } = Card;
 
+// 輪播思考重構中
+
 // 响应式的卡片轮播图
 const RecommendCarousel: React.FC = () => (
   <>
