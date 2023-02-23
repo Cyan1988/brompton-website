@@ -18,13 +18,9 @@ const ProductsShow = () => {
         },
       }}
     >
-      {/* 左上角系列名，之後想想 */}
-      <div className="absolute text-[2rem] pt-1 ml-[5%] sm:ml-[4%] lg:ml-[18.2%] z-10">
-        Find
-      </div>
       {/* Grid List 组件 */}
       <List
-        className="bg-neutral-200 pt-6 md: col-start-2 md:col-end-7"
+        className="bg-slate-200 pt-6 md: col-start-2 md:col-end-7"
         grid={{
           gutter: 0,
           xs: 1,

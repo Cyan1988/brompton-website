@@ -17,7 +17,7 @@ const FilterNav = () => {
   }
 
   return (
-    <div className="bg-neutral-200 text-[1.25rem] p-3  lg:pt-6 lg:col-start-1 lg:col-end-1">
+    <div className="bg-neutral-100 text-[1.25rem] p-3  lg:pt-6 lg:col-start-1 lg:col-end-1">
       {/* Filter 按键 电脑端不显示 */}
       <div className="text-right">
         <div

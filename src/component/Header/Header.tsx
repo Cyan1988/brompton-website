@@ -106,7 +106,7 @@ const Header: React.FC = () => {
           <ul
             className="absolute bottom-[5%] md:inline-flex md:static md:py-2"
             onClick={() => {
-              setNavOpen(!navOpen);
+              setNavOpen(false);
             }}
           >
             {/* 搜索 */}
@@ -139,7 +139,7 @@ const Header: React.FC = () => {
 
         {/* 始終在導航欄出現的購物車按鈕 */}
         <div className="absolute top-5 right-2 md:static md:inline-flex md:mt-5 md:mr-4">
-          <span className="ml-4 mr-2">|</span>
+          <span className="hidden md:flex ml-4 mr-2">|</span>
           <img
             className="inline-block mx-2 h-7 cursor-pointer"
             src={require("../../icons/basket.png")}
