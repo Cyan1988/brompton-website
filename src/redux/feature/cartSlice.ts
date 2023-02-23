@@ -23,7 +23,6 @@ const cartSlice = createSlice({
     },
     decrementQuantity: (state, action) => {
       const item = state.cart.find((item) => item.id === action.payload);
-      console.log(item);
       if (item.quantity === 1) {
         item.quantity = 1;
       } else {
