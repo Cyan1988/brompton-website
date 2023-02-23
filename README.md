@@ -21,12 +21,11 @@ Language:
 CSS:
 
 1. Tailwind CSS
-2. Ant Design
-3. Ant Design Icon
-4. Hero Icon
+2. Ant Design + Icon
+3. Hero Icon
 
 Framework:
 
 1. React
-2. React-Router
+2. React-Router v6
 3. React-Redux (Redux Toolkit, Redux Persist)
