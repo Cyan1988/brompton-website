@@ -31,7 +31,7 @@ function ProductsDetailPage() {
   const dispatch = useAppDispatch();
 
   return (
-    <div className="grid grid-rows-2 items-center text-center bg-gray-100 lg:grid-rows-none lg:grid-cols-5">
+    <div className="grid grid-rows-2 items-center text-center bg-neutral-100 lg:grid-rows-none lg:grid-cols-5">
       <div className="lg:col-span-3">
         {/* 左侧大图片 */}
         <img

@@ -1,30 +1,16 @@
-# Pratice_Brompton
+# Tech Stack：
 
-這是前端新手以 Brompton 網頁為參考的個人練習項目，此項目尚未完成，僅作爲學習交流之用。
-
-### TodoList：
-
-- [x] search, filterSidebar 數據交互
-- [x] 購物車數據交互
-- [x] 購物車數據持久化 redux persist，目前所有數據交互已全部完成，接下來進行組件重構和樣式修改
-- [x] header 修改，cart 和 detailPage 的樣式
-- [x] Contact About Login 等其他靜態頁面的配置
-- [x] carousel 重構
-- [ ] debug, 样式修改
-
-### Tech Stack：
-
-Language:
+### Language:
 
 1. Typescript
 
-CSS:
+### CSS:
 
 1. Tailwind CSS
 2. Ant Design + Icon
 3. Hero Icon
 
-Framework:
+### Frameworks:
 
 1. React
 2. React-Router v6
