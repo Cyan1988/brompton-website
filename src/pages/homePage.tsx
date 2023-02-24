@@ -1,7 +1,7 @@
 import MainCarousel from "../component/Carousel/MainCarousel";
 import RecommendList from "../component/RecommendList/RecommendList";
 
-function HomePage() {
+function homePage() {
   return (
     <>
       <MainCarousel />
@@ -10,4 +10,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default homePage;

@@ -2,7 +2,7 @@ import React from "react";
 import Login from "../component/Login&Register/Login";
 import Register from "../component/Login&Register/Register";
 
-function LogInPage() {
+function logInPage() {
   return (
     <>
       <div className="bg-cyan-500 py-4 text-slate-50 text-[2rem] font-sans font-bold text-center">
@@ -42,4 +42,4 @@ function LogInPage() {
   );
 }
 
-export default LogInPage;
+export default logInPage;

@@ -2,7 +2,7 @@ import React from "react";
 import { Button, ConfigProvider, Result } from "antd";
 import { Link } from "react-router-dom";
 
-const CheckoutPage: React.FC = () => (
+const checkoutPage = () => (
   <ConfigProvider
     theme={{
       token: {
@@ -25,4 +25,4 @@ const CheckoutPage: React.FC = () => (
     />
   </ConfigProvider>
 );
-export default CheckoutPage;
+export default checkoutPage;

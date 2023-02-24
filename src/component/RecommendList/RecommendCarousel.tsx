@@ -3,6 +3,7 @@ import { Carousel, Card } from "antd";
 import products_list from "../../data/products_list.json";
 import { LeftOutlined } from "@ant-design/icons";
 import { RightOutlined } from "@ant-design/icons/lib/icons";
+import { useNavigate } from "react-router";
 // import "./arrow_style.css";
 
 const itemList: {
@@ -11,6 +12,7 @@ const itemList: {
   price: string;
   weight: string;
   text: string;
+  id: string;
 }[] = products_list;
 
 // 卡片组件
@@ -20,6 +22,8 @@ const { Meta } = Card;
 const RecommendCarousel: React.FC = () => {
   // useRef 傳參
   const carouselRef: any = useRef(null);
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -66,6 +70,9 @@ const RecommendCarousel: React.FC = () => {
             <Card
               className="block h-[25rem] md:h-[30rem] mx-4 my-6 cursor-pointer"
               hoverable
+              onClick={() => {
+                navigate(`/shop/detail/${item.id}`);
+              }}
               cover={
                 <img
                   className="h-[15rem] md:h-[20rem] object-cover"

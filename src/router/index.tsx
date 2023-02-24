@@ -44,6 +44,14 @@ export default function BpRouter() {
       path: "/login",
       element: LazyLoad("logInPage"),
     },
+    {
+      path: "/contact",
+      element: LazyLoad("contactPage"),
+    },
+    {
+      path: "/about",
+      element: LazyLoad("aboutPage"),
+    },
   ]);
   return element;
 }
