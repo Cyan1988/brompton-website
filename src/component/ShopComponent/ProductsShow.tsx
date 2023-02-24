@@ -1,11 +1,14 @@
 import { Card } from "antd";
 import { List, Breadcrumb, ConfigProvider } from "antd";
 import { useAppSelector } from "../../redux/hooks";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const ProductsShow = () => {
   // 產品顯示界面不需要派發，只需要接收數據進行狀態渲染
   const list = useAppSelector((state) => state.filter);
+
+  // 路由跳轉
+  const navigate = useNavigate();
 
   // Ant Design卡片组件
   const { Meta } = Card;
@@ -59,7 +62,7 @@ const ProductsShow = () => {
                   />
                 }
                 onClick={() => {
-                  window.location.href = `/shop/detail/${item.id}`;
+                  navigate(`/shop/detail/${item.id}`);
                 }}
               >
                 <Meta title={item.title} />

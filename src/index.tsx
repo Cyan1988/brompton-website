@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import ScrollToTop from "./component/ScrollToTop"; // 路由跳轉回到頁面頂部
 import { store, persistor } from "./redux/store";
 import { Provider } from "react-redux";
@@ -15,13 +15,13 @@ const root = ReactDOM.createRoot(
 root.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      <BrowserRouter>
+      <HashRouter>
         <ScrollToTop>
           <StrictMode>
             <App />
           </StrictMode>
         </ScrollToTop>
-      </BrowserRouter>
+      </HashRouter>
     </PersistGate>
   </Provider>
 );
