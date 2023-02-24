@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/241.b51ea856.chunk.js","mappings":"qJAUA,UARA,WACE,OACE,+BACE,yBAAK,kGAGX,C","sources":["pages/checkoutPage.tsx"],"sourcesContent":["import React from \"react\";\r\n\r\nfunction CheckoutPage() {\r\n  return (\r\n    <>\r\n      <div>最后的结算页面: 需要双向绑定数据</div>\r\n    </>\r\n  );\r\n}\r\n\r\nexport default CheckoutPage;\r\n"],"names":[],"sourceRoot":""}
