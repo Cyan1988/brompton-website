@@ -24,21 +24,6 @@ function ProductsDetailPage() {
   const detailList = itemList.filter((item) => item.id === params.id);
   const view = detailList[0];
 
-  // 設置函數通過tailwind改變背景色
-  function colorTheme() {
-    switch (true) {
-      case view.series === "A Line": {
-        return "teal-600";
-      }
-      case view.series === "C Line": {
-        return "red-600";
-      }
-      case view.series === "P Line": {
-        return "violet-900";
-      }
-    }
-  }
-
   // 商品數量的狀態
   let [count, setCount] = useState(1);
 
