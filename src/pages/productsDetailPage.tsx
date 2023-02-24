@@ -57,7 +57,7 @@ function ProductsDetailPage() {
       </div>
       {/* 右侧详情 */}
       <div className="grid grid-rows-2 lg:col-span-2 text-slate-50">
-        <div className={`bg-${colorTheme()} grid grid-rows-2`}>
+        <div className="grid grid-rows-2 bg-slate-700">
           <div>
             <img
               className="h-[6em] mx-auto mt-10"
@@ -82,7 +82,7 @@ function ProductsDetailPage() {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className={`inline-block text-${colorTheme()} w-6 mx-2 align-sub `}
+                className="inline-block w-6 mx-2 align-sub text-slate-700"
               >
                 <path
                   fillRule="evenodd"
@@ -101,7 +101,7 @@ function ProductsDetailPage() {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className={`w-6 mx-2 text-${colorTheme()} align-sub inline-block`}
+                className="inline-block w-6 mx-2 align-sub text-slate-700"
               >
                 <path
                   fillRule="evenodd"
