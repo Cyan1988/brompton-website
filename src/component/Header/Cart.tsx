@@ -21,7 +21,7 @@ function Cart(props: any) {
     let totalPrice = 0;
     let totalQuantity = 0;
     cart.forEach((item) => {
-      let cleanPriceStr = item.price.replace("£", "");
+      let cleanPriceStr = item.price.replace("$", "");
       let priceNoCommasStr = cleanPriceStr.replace(/,/g, "");
       let price = Number(priceNoCommasStr);
       totalQuantity += item.quantity;
@@ -160,9 +160,9 @@ function Cart(props: any) {
           <div>Total Quantity: {getTotal().totalQuantity}</div>
           <div>
             Total Amount:{" "}
-            {getTotal().totalPrice.toLocaleString("en-GB", {
+            {getTotal().totalPrice.toLocaleString("zh-HK", {
               style: "currency",
-              currency: "GBP",
+              currency: "HKD",
             })}
           </div>
         </div>

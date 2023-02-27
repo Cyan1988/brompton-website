@@ -23,7 +23,7 @@ const ProductsShow = () => {
         }}
       >
         {/* 麵包屑 */}
-        <Breadcrumb className="absolute z-20 ml-7 mt-5">
+        <Breadcrumb className="absolute z-10 ml-7 mt-5">
           <Breadcrumb.Item>
             <Link to="/">Home</Link>
           </Breadcrumb.Item>
@@ -33,7 +33,7 @@ const ProductsShow = () => {
         </Breadcrumb>
         {/* Grid List 组件 */}
         <List
-          className="bg-slate-200 pt-5"
+          className="bg-[#eff2f2] pt-5"
           grid={{
             gutter: 0,
             xs: 1,
@@ -51,12 +51,12 @@ const ProductsShow = () => {
           renderItem={(item) => (
             <List.Item>
               <Card
-                className="block h-[25rem] mt-10 cursor-pointer bg-[#f9f7f8]"
+                className="block h-[25rem] mt-10 cursor-pointer bg-[#F9F7F8]"
                 hoverable
                 bordered
                 cover={
                   <img
-                    className="h-[15rem] object-cover"
+                    className="h-[15rem] object-contain"
                     alt=""
                     src={item.img_url}
                   />

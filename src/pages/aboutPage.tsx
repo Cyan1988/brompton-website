@@ -37,9 +37,9 @@ function aboutPage() {
 
       <div className="bg-gray-200 font-sans grid grid-rows-2 md:grid-rows-none md:grid-cols-2">
         <img
-          src={require("../images/C Line Four Block 840 x 740.jpg")}
+          src="https://www.brompton.com/-/media/sections/my22/why-brompton/gif---c-line-grey-background.ashx?h=1080&w=1920&la=en-GB&hash=765D69E5B95BE465E2BB709738DBFFE5"
           alt=""
-          className="w-full object-cover"
+          className="w-full h-[32rem] object-cover"
         ></img>
 
         <div className="p-4 text-center self-center">
