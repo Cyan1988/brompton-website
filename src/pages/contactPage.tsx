@@ -107,6 +107,9 @@ function contactPage() {
             <label>Message</label>
             <textarea className="block w-full h-[6rem] rounded-md mt-2" />
           </div>
+          <button className="border-solid border-gray-600 border-2 rounded-md px-2 py-1 md:float-left float-right">
+            Submit
+          </button>
         </div>
       </div>
     </>
