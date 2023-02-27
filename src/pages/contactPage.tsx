@@ -91,11 +91,17 @@ function contactPage() {
             </div>
             <div>
               <label>E-mail</label>
-              <input className="block w-full h-[1.75rem] rounded-md mt-2" />
+              <input
+                type={"email"}
+                className="block w-full h-[1.75rem] rounded-md mt-2"
+              />
             </div>
             <div>
               <label>Phone(optional)</label>
-              <input className="block w-full h-[1.75rem] rounded-md mt-2" />
+              <input
+                type={"number"}
+                className="block w-full h-[1.75rem] rounded-md mt-2"
+              />
             </div>
           </div>
 
@@ -107,7 +113,7 @@ function contactPage() {
             <label>Message</label>
             <textarea className="block w-full h-[6rem] rounded-md mt-2" />
           </div>
-          <button className="border-solid border-gray-600 border-2 rounded-md px-2 py-1 md:float-left float-right">
+          <button className="border-solid bg-gray-900 text-slate-100 border-gray-900 border-2 rounded-md px-2 py-1">
             Submit
           </button>
         </div>
