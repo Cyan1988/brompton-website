@@ -51,7 +51,7 @@ const ProductsShow = () => {
           renderItem={(item) => (
             <List.Item>
               <Card
-                className="block h-[25rem] mt-10 cursor-pointer"
+                className="block h-[25rem] mt-10 cursor-pointer bg-[#f9f7f8]"
                 hoverable
                 bordered
                 cover={

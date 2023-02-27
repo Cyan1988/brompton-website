@@ -30,6 +30,36 @@ function ProductsDetailPage() {
   // 以下是redux獲取數據
   const dispatch = useAppDispatch();
 
+  // 背景色
+  function bgTheme() {
+    switch (true) {
+      case view.series === "A Line": {
+        return "bg-teal-600";
+      }
+      case view.series === "C Line": {
+        return "bg-red-600";
+      }
+      case view.series === "P Line": {
+        return "bg-violet-900";
+      }
+    }
+  }
+
+  // icon 顔色
+  function iconTheme() {
+    switch (true) {
+      case view.series === "A Line": {
+        return "text-teal-600";
+      }
+      case view.series === "C Line": {
+        return "text-red-600";
+      }
+      case view.series === "P Line": {
+        return "text-violet-900";
+      }
+    }
+  }
+
   return (
     <div className="grid grid-rows-2 items-center text-center bg-neutral-100 lg:grid-rows-none lg:grid-cols-5">
       <div className="lg:col-span-3">
@@ -42,7 +72,7 @@ function ProductsDetailPage() {
       </div>
       {/* 右侧详情 */}
       <div className="grid grid-rows-2 lg:col-span-2 text-slate-50">
-        <div className="grid grid-rows-2 bg-slate-700">
+        <div className={`grid grid-rows-2 ${bgTheme()}`}>
           <div>
             <img
               className="h-[6em] mx-auto mt-10"
@@ -56,7 +86,7 @@ function ProductsDetailPage() {
           </div>
         </div>
         <div className="bg-zinc-200 text-slate-900 text-center grid grid-rows-3">
-          <div className="font-bold text-[1.5rem] my-auto">
+          <div className="font-bold text-[1.5rem] my-auto flex justify-center">
             Quantity:
             <button
               onClick={() => {
@@ -67,7 +97,7 @@ function ProductsDetailPage() {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="inline-block w-6 mx-2 align-sub text-slate-700"
+                className={`inline-block w-6 mx-2 align-sub ${iconTheme()}`}
               >
                 <path
                   fillRule="evenodd"
@@ -86,7 +116,7 @@ function ProductsDetailPage() {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="inline-block w-6 mx-2 align-sub text-slate-700"
+                className={`inline-block w-6 mx-2 align-sub ${iconTheme()}`}
               >
                 <path
                   fillRule="evenodd"
