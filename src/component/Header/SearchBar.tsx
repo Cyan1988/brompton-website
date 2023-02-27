@@ -1,4 +1,5 @@
 import { Input, ConfigProvider } from "antd";
+import { useNavigate } from "react-router";
 
 function SearchBar(props: any) {
   // 获取header的状态设置开关
@@ -6,8 +7,10 @@ function SearchBar(props: any) {
 
   const { Search } = Input;
 
+  const navigate = useNavigate();
+
   const onSearch = (value: string) => {
-    window.location.href = `/shop/result/${value}`;
+    navigate(`/shop/result/${value}`);
   };
 
   return (
