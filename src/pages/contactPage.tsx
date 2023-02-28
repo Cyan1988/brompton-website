@@ -99,7 +99,7 @@ function contactPage() {
             <div>
               <label>Phone(optional)</label>
               <input
-                type={"number"}
+                type={"tel"}
                 className="block w-full h-[1.75rem] rounded-md mt-2"
               />
             </div>
