@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/brompton-website/static/css/main.18c06727.css",
-    "main.js": "/brompton-website/static/js/main.8957f29d.js",
+    "main.css": "/brompton-website/static/css/main.cc6abfe5.css",
+    "main.js": "/brompton-website/static/js/main.40a08b81.js",
     "static/js/944.ffa9fa47.chunk.js": "/brompton-website/static/js/944.ffa9fa47.chunk.js",
     "static/js/241.6715daba.chunk.js": "/brompton-website/static/js/241.6715daba.chunk.js",
     "static/js/633.7c8996e9.chunk.js": "/brompton-website/static/js/633.7c8996e9.chunk.js",
     "static/js/519.b375cdc2.chunk.js": "/brompton-website/static/js/519.b375cdc2.chunk.js",
     "static/js/38.f294c239.chunk.js": "/brompton-website/static/js/38.f294c239.chunk.js",
     "static/js/423.93b01c5d.chunk.js": "/brompton-website/static/js/423.93b01c5d.chunk.js",
-    "static/js/367.b55abd61.chunk.js": "/brompton-website/static/js/367.b55abd61.chunk.js",
+    "static/js/367.97050005.chunk.js": "/brompton-website/static/js/367.97050005.chunk.js",
     "static/js/443.50ed90d1.chunk.js": "/brompton-website/static/js/443.50ed90d1.chunk.js",
     "static/js/787.db46d638.chunk.js": "/brompton-website/static/js/787.db46d638.chunk.js",
     "static/js/177.700f5026.chunk.js": "/brompton-website/static/js/177.700f5026.chunk.js",
@@ -29,15 +29,15 @@
     "static/media/icon_C.svg": "/brompton-website/static/media/icon_C.66bfacaf50886c4cf05d.svg",
     "static/media/icon_P.svg": "/brompton-website/static/media/icon_P.d8afba36715d9b272b66.svg",
     "static/media/icon_A_line.svg": "/brompton-website/static/media/icon_A_line.9b6885d01f8bfac02720.svg",
-    "main.18c06727.css.map": "/brompton-website/static/css/main.18c06727.css.map",
-    "main.8957f29d.js.map": "/brompton-website/static/js/main.8957f29d.js.map",
+    "main.cc6abfe5.css.map": "/brompton-website/static/css/main.cc6abfe5.css.map",
+    "main.40a08b81.js.map": "/brompton-website/static/js/main.40a08b81.js.map",
     "944.ffa9fa47.chunk.js.map": "/brompton-website/static/js/944.ffa9fa47.chunk.js.map",
     "241.6715daba.chunk.js.map": "/brompton-website/static/js/241.6715daba.chunk.js.map",
     "633.7c8996e9.chunk.js.map": "/brompton-website/static/js/633.7c8996e9.chunk.js.map",
     "519.b375cdc2.chunk.js.map": "/brompton-website/static/js/519.b375cdc2.chunk.js.map",
     "38.f294c239.chunk.js.map": "/brompton-website/static/js/38.f294c239.chunk.js.map",
     "423.93b01c5d.chunk.js.map": "/brompton-website/static/js/423.93b01c5d.chunk.js.map",
-    "367.b55abd61.chunk.js.map": "/brompton-website/static/js/367.b55abd61.chunk.js.map",
+    "367.97050005.chunk.js.map": "/brompton-website/static/js/367.97050005.chunk.js.map",
     "443.50ed90d1.chunk.js.map": "/brompton-website/static/js/443.50ed90d1.chunk.js.map",
     "787.db46d638.chunk.js.map": "/brompton-website/static/js/787.db46d638.chunk.js.map",
     "177.700f5026.chunk.js.map": "/brompton-website/static/js/177.700f5026.chunk.js.map",
@@ -46,7 +46,7 @@
     "742.2a3d7976.chunk.js.map": "/brompton-website/static/js/742.2a3d7976.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.18c06727.css",
-    "static/js/main.8957f29d.js"
+    "static/css/main.cc6abfe5.css",
+    "static/js/main.40a08b81.js"
   ]
 }
