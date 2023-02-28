@@ -82,7 +82,7 @@ const RecommendCarousel: React.FC = () => {
               }
             >
               <Meta title={item.title} />
-              <div className="mx-1 my-6">
+              <div className="my-6">
                 {item.price}
                 <span className="px-2">—</span>
                 {item.weight}
