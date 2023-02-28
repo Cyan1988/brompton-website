@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/brompton-website/static/css/main.0142fb23.css",
-    "main.js": "/brompton-website/static/js/main.375ffc84.js",
+    "main.js": "/brompton-website/static/js/main.fd6b0e77.js",
     "static/js/944.ffa9fa47.chunk.js": "/brompton-website/static/js/944.ffa9fa47.chunk.js",
     "static/js/241.6715daba.chunk.js": "/brompton-website/static/js/241.6715daba.chunk.js",
-    "static/js/633.7c8996e9.chunk.js": "/brompton-website/static/js/633.7c8996e9.chunk.js",
+    "static/js/633.5ec5f94b.chunk.js": "/brompton-website/static/js/633.5ec5f94b.chunk.js",
     "static/js/519.a2a60602.chunk.js": "/brompton-website/static/js/519.a2a60602.chunk.js",
     "static/js/38.f294c239.chunk.js": "/brompton-website/static/js/38.f294c239.chunk.js",
     "static/js/423.93b01c5d.chunk.js": "/brompton-website/static/js/423.93b01c5d.chunk.js",
@@ -30,10 +30,10 @@
     "static/media/icon_P.svg": "/brompton-website/static/media/icon_P.d8afba36715d9b272b66.svg",
     "static/media/icon_A_line.svg": "/brompton-website/static/media/icon_A_line.9b6885d01f8bfac02720.svg",
     "main.0142fb23.css.map": "/brompton-website/static/css/main.0142fb23.css.map",
-    "main.375ffc84.js.map": "/brompton-website/static/js/main.375ffc84.js.map",
+    "main.fd6b0e77.js.map": "/brompton-website/static/js/main.fd6b0e77.js.map",
     "944.ffa9fa47.chunk.js.map": "/brompton-website/static/js/944.ffa9fa47.chunk.js.map",
     "241.6715daba.chunk.js.map": "/brompton-website/static/js/241.6715daba.chunk.js.map",
-    "633.7c8996e9.chunk.js.map": "/brompton-website/static/js/633.7c8996e9.chunk.js.map",
+    "633.5ec5f94b.chunk.js.map": "/brompton-website/static/js/633.5ec5f94b.chunk.js.map",
     "519.a2a60602.chunk.js.map": "/brompton-website/static/js/519.a2a60602.chunk.js.map",
     "38.f294c239.chunk.js.map": "/brompton-website/static/js/38.f294c239.chunk.js.map",
     "423.93b01c5d.chunk.js.map": "/brompton-website/static/js/423.93b01c5d.chunk.js.map",
@@ -47,6 +47,6 @@
   },
   "entrypoints": [
     "static/css/main.0142fb23.css",
-    "static/js/main.375ffc84.js"
+    "static/js/main.fd6b0e77.js"
   ]
 }
