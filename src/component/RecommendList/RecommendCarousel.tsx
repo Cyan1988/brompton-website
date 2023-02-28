@@ -68,7 +68,7 @@ const RecommendCarousel: React.FC = () => {
         {itemList.map((item) => (
           <div key={item.title}>
             <Card
-              className="block h-[25rem] md:h-[30rem] mx-4 my-6 cursor-pointer"
+              className="block h-[25rem] md:h-[30rem] mx-4 my-6 bg-[#F9F7F8] cursor-pointer"
               hoverable
               onClick={() => {
                 navigate(`/shop/detail/${item.id}`);
@@ -95,13 +95,13 @@ const RecommendCarousel: React.FC = () => {
 
       {/* 左右切換按鈕 */}
       <LeftOutlined
-        className="text-white absolute text-[2rem] left-2 -translate-y-[19rem]"
+        className="text-white absolute text-[2rem] left-2 -translate-y-[18rem]"
         onClick={() => {
           carouselRef.current.prev();
         }}
       />
       <RightOutlined
-        className="text-white absolute text-[2rem] right-2 -translate-y-[19rem]"
+        className="text-white absolute text-[2rem] right-2 -translate-y-[18rem]"
         onClick={() => {
           carouselRef.current.next();
         }}

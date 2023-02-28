@@ -16,8 +16,8 @@ function SearchBar(props: any) {
   return (
     <div
       className={`fixed ${
-        searchShow ? "grid" : "hidden"
-      } grid grid-rows-3 grid-cols-1 justify-between w-full sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-[30%] h-screen z-20 top-0 right-0 pt-24 p-10 bg-neutral-100`}
+        searchShow ? "grid" : "translate-x-full"
+      } grid grid-rows-3 grid-cols-1 justify-between w-full sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-[30%] h-screen z-20 top-0 right-0 pt-24 p-10 bg-neutral-100 transition-transform`}
     >
       <button
         className="absolute top-3 right-3"

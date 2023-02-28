@@ -43,8 +43,8 @@ function Cart(props: any) {
     <>
       <div
         className={`fixed ${
-          cartOpen ? "grid" : "hidden"
-        } grid grid-rows-8 grid-cols-1 text-center justify-between text-lg w-full sm:w-[70%] md:w-[50%] lg:w-[40%] h-full z-20 top-0 right-0 pt-24 bg-neutral-200`}
+          cartOpen ? "grid" : "translate-x-full"
+        } grid grid-rows-8 grid-cols-1 text-center justify-between text-lg w-full sm:w-[70%] md:w-[50%] lg:w-[35%] h-full z-20 top-0 right-0 pt-24 bg-neutral-200 transition-transform`}
       >
         {/* 開關 */}
         <button
@@ -78,7 +78,7 @@ function Cart(props: any) {
           ></img>
         </div>
         {/* 商品列表 */}
-        <div className="row-span-5 overflow-y-scroll">
+        <div className="row-span-5 mx-1 overflow-y-scroll">
           {cart !== undefined && cart.length === 0 ? (
             <div>Your Basket is Empty.</div>
           ) : (
