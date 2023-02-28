@@ -163,7 +163,7 @@ function ProductsDetailPage() {
             </div>
             <div className="my-auto pt-0">
               <button
-                className="bg-slate-900 hover:bg-slate-500 text-[1.25rem] text-slate-200 font-semibold hover:text-white w-[40%] h-[2.75rem] m-auto border border-black hover:border-transparent rounded"
+                className="bg-slate-900 hover:bg-slate-500 text-[1.25rem] text-slate-200 font-semibold hover:text-white w-[40%] h-[2.75rem] mx-auto mb-3 border border-black hover:border-transparent rounded"
                 onClick={() => {
                   dispatch(
                     addToCart({
