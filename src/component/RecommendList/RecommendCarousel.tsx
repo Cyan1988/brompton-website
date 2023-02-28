@@ -62,7 +62,7 @@ const RecommendCarousel: React.FC = () => {
             },
           },
         ]}
-        className="content-around px-12 pb-2 bg-zinc-600"
+        className="content-around px-12 pb-2 bg-gray-200"
         ref={carouselRef}
       >
         {itemList.map((item) => (
@@ -95,13 +95,13 @@ const RecommendCarousel: React.FC = () => {
 
       {/* 左右切換按鈕 */}
       <LeftOutlined
-        className="text-white absolute text-[2rem] left-2 -translate-y-[18rem]"
+        className="text-zinc-600 absolute text-[2rem] left-2 -translate-y-[18rem]"
         onClick={() => {
           carouselRef.current.prev();
         }}
       />
       <RightOutlined
-        className="text-white absolute text-[2rem] right-2 -translate-y-[18rem]"
+        className="text-zinc-600 absolute text-[2rem] right-2 -translate-y-[18rem]"
         onClick={() => {
           carouselRef.current.next();
         }}
