@@ -4,7 +4,6 @@ import products_list from "../../data/products_list.json";
 import { LeftOutlined } from "@ant-design/icons";
 import { RightOutlined } from "@ant-design/icons/lib/icons";
 import { useNavigate } from "react-router";
-// import "./arrow_style.css";
 
 const itemList: {
   title: string;
@@ -62,7 +61,7 @@ const RecommendCarousel: React.FC = () => {
             },
           },
         ]}
-        className="content-around px-12 pb-2 bg-gray-200"
+        className="content-around px-12 pb-2 bg-[#E8E8E8]"
         ref={carouselRef}
       >
         {itemList.map((item) => (
@@ -75,7 +74,7 @@ const RecommendCarousel: React.FC = () => {
               }}
               cover={
                 <img
-                  className="h-[15rem] md:h-[20rem] object-cover"
+                  className="h-[15rem] md:h-[20rem] object-contain"
                   alt=""
                   src={item.img_url}
                 />
@@ -95,13 +94,13 @@ const RecommendCarousel: React.FC = () => {
 
       {/* 左右切換按鈕 */}
       <LeftOutlined
-        className="text-zinc-600 absolute text-[2rem] left-2 -translate-y-[18rem]"
+        className="text-gray-700 absolute text-[2rem] left-2 -translate-y-[18rem]"
         onClick={() => {
           carouselRef.current.prev();
         }}
       />
       <RightOutlined
-        className="text-zinc-600 absolute text-[2rem] right-2 -translate-y-[18rem]"
+        className="text-gray-700 absolute text-[2rem] right-2 -translate-y-[18rem]"
         onClick={() => {
           carouselRef.current.next();
         }}

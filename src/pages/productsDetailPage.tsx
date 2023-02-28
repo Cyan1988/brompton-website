@@ -62,17 +62,14 @@ function ProductsDetailPage() {
   const dispatch = useAppDispatch();
 
   return (
-    <div
-      className="grid grid-rows-3 lg:grid-rows-none place-items-center text-center lg:grid-cols-7"
-      style={{ backgroundColor: "#F7F7F7" }}
-    >
-      <div className="lg:col-span-4">
+    <div className="bg-[#F7F7F7] grid grid-rows-3 lg:grid-rows-none place-items-center text-center lg:grid-cols-7">
+      <div className="row-span-1 lg:col-span-4">
         {/* 左侧大图片 */}
         <img className="object-cover" src={view.img_url} alt=""></img>
       </div>
 
       {/* 右侧详情 */}
-      <div className="grid row-span-2 lg:row-span-1 lg:col-span-3 text-slate-50">
+      <div className="row-span-2 lg:row-span-1 lg:col-span-3 text-slate-50">
         <div className={`${colorTheme()}`}>
           <div className="py-10">
             <img
@@ -106,10 +103,8 @@ function ProductsDetailPage() {
             <span> {view.handlebars}</span>
           </div>
         </div>
-        <div
-          className=" text-slate-900 text-center pt-3"
-          style={{ backgroundColor: "#F7F7F7" }}
-        >
+
+        <div className="bg-[#F7F7F7] text-slate-900 text-center mt-5">
           <div className="font-bold text-[1.5rem]">
             Quantity:
             <button
@@ -150,6 +145,7 @@ function ProductsDetailPage() {
               </svg>
             </button>
           </div>
+
           <div className="my-3">
             <span className="font-bold text-[1.25rem]">
               Price: {view.price}
